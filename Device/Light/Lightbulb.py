@@ -1,7 +1,7 @@
-
 from Device.Light.LightInterfaces import Light, ModernLight
 
 
+# Concrete Products
 class Lightbulb(Light):
     def getproduct(self):
         print("Lightbulb")
@@ -10,7 +10,7 @@ class Lightbulb(Light):
 class ModernLightbulb(ModernLight):
 
     def getproduct(self) -> str:
-        print ("Modern Lightbulb")
+        print("Modern Lightbulb ON")
 
     def getfeature(self) -> str:
-        print ("Low Energy Consumption")
+        print("Low Energy Notification")
