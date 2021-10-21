@@ -6,14 +6,14 @@ from Device.Light.LightInterfaces import ModernLight
 # Abstract Base Decorator
 class ModernLightDecorator(ModernLight, ABC):
     """Abstract class to all decorators complementing ModernLight Products
+        Parameters:
+                ModernLight object to be decorated
         Attributes:
             _modernlight : ModernLight
-                ModernLight Object
-        Parameters:
-                instantiated ModernLight object
+                represents the passed ModernLight object
         Methods:
             modernLight()
-                returns the ModernLight oroduct
+                returns the ModernLight product setter and getters
             getproduct()
                 returns the getproduct() method of the passed ModernLight object
             getfeature()
@@ -37,16 +37,13 @@ class ModernLightDecorator(ModernLight, ABC):
 
 # Lightweight Decorators
 class CountdownDecorator(ModernLightDecorator):
-    """Extends the Abstract ModernLightDecorator class. Adds a counter + "battery" String output to the ModernLight getfeature() Method
-        Returns:
-            getfeature() method of passed ModernLight Object
+    """Extends the Abstract ModernLightDecorator class.
     """
 
     def getfeature(self) -> str:
-        """ Overwrites the Abstract ModernLightDecorator getfeature() Method
-        Returns:
-          getfeature() method of passed ModernLight Object
-    """
+        """ Overwrites the Abstract ModernLightDecorator getfeature() Method. Provides additional short 5 second
+        counter + 'battery' string output Returns: getfeature() method of passed ModernLight Object
+        """
         count = 5
         for x in range(count, -1, -1):
             print("battery:", x)
@@ -55,12 +52,12 @@ class CountdownDecorator(ModernLightDecorator):
 
 
 class SoundDecorator(ModernLightDecorator):
-    """Extends the Abstract ModernLightDecorator class. Adds a "Soothing music starts" String output to the ModernLight getproduct() Method
+    """Extends the Abstract ModernLightDecorator class.
     """
 
     def getproduct(self) -> str:
-        """ Overwrites the Abstract ModernLightDecorator getproduct() Method
-        Returns:
-        getfeature() method of passed ModernLight Object"""
+        """ Overwrites the Abstract ModernLightDecorator getproduct() Method. Provides additional 'Soothing music
+        starts' string output Returns: getfeature() method of passed ModernLight Object
+        """
         print("Soothing music starts")
         return self.modernLight.getproduct()

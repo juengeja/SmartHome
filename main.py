@@ -6,6 +6,6 @@ if __name__ == '__main__':
     countdownDecorator = CountdownDecorator(lightbulb)
     soundDecoractor = SoundDecorator(lightbulb)
     lightbulb.getproduct()
-    # soundDecoractor.getproduct()
-    # countdownDecorator.getfeature()
+    soundDecoractor.getproduct()
+    countdownDecorator.getfeature()
     # run_singleModernLightExample()
