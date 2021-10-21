@@ -1,4 +1,4 @@
-from Device.DeviceDecorator.LightDecorator import CountdownDecorator, SoundDecorator
+
 from Device.Light.LightInterfaces import Light, ModernLight
 
 
@@ -9,9 +9,8 @@ class Lightbulb(Light):
 
 class ModernLightbulb(ModernLight):
 
-    @CountdownDecorator
-    def getproduct(self):
-        print("Modern Lightbulb")
+    def getproduct(self) -> str:
+        print ("Modern Lightbulb")
 
-    def getfeature(self):
-        print("Low Energy Consumption")
+    def getfeature(self) -> str:
+        print ("Low Energy Consumption")

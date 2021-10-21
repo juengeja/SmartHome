@@ -1,8 +1,11 @@
-
-from Device.Light import run_singleModernLightExample, run_lightExample, run_modernlightExample
-
+from Device.DeviceDecorator2.LightDecorator import CountdownDecorator, SoundDecorator
+from Device.Light import LightbulbFactory
 
 if __name__ == '__main__':
-    run_singleModernLightExample()
-
-
+    lightbulb = LightbulbFactory().create_modernlight()
+    countdownDecorator = CountdownDecorator(lightbulb)
+    soundDecoractor = SoundDecorator(lightbulb)
+    lightbulb.getproduct()
+    # soundDecoractor.getproduct()
+    # countdownDecorator.getfeature()
+    # run_singleModernLightExample()
