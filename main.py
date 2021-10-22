@@ -5,7 +5,7 @@ if __name__ == '__main__':
     lightbulb = LightbulbFactory().create_modernlight()
     countdownDecorator = CountdownDecorator(lightbulb)
     soundDecoractor = SoundDecorator(lightbulb)
-    lightbulb.getproduct()
+    # lightbulb.getproduct()
     soundDecoractor.getproduct()
     countdownDecorator.getfeature()
     # run_singleModernLightExample()

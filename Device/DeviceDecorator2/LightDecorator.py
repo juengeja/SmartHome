@@ -13,7 +13,7 @@ class ModernLightDecorator(ModernLight, ABC):
                 represents the passed ModernLight object
         Methods:
             modernLight()
-                returns the ModernLight product setter and getters
+                utilizes @property decorator for ModernLight object setter and getters
             getproduct()
                 returns the getproduct() method of the passed ModernLight object
             getfeature()
@@ -41,8 +41,8 @@ class CountdownDecorator(ModernLightDecorator):
     """
 
     def getfeature(self) -> str:
-        """ Overwrites the Abstract ModernLightDecorator getfeature() Method. Provides additional short 5 second
-        counter + 'battery' string output Returns: getfeature() method of passed ModernLight Object
+        """ Overwrites the Abstract ModernLightDecorator getfeature() Method. Provides additional short counter +
+        'battery' string output Returns: getfeature() method of passed ModernLight Object
         """
         count = 5
         for x in range(count, -1, -1):

@@ -3,7 +3,7 @@ from Device.Light.LightInterfaces import Light, ModernLight
 
 # Concrete Products
 class Lightbulb(Light):
-    """ Concrete Lightbulb Product. Extends Light Interface
+    """ Concrete Lightbulb Product. Implements Light Interface
         """
     def getproduct(self):
         """ prints: 'Lightbulb' string output
@@ -12,7 +12,7 @@ class Lightbulb(Light):
 
 
 class ModernLightbulb(ModernLight):
-    """ Concrete ModernLightbulb Product. Extends ModernLight Interface.
+    """ Concrete ModernLightbulb Product. Implements ModernLight Interface.
         """
     def getproduct(self) -> str:
         """ prints: 'Modern Lightbulb ON' string output
