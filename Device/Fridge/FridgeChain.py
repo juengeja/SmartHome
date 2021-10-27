@@ -7,8 +7,8 @@ class FridgeChain:
 
     def __init__(self):
         self.link1 = Minibar(5, 5, 3, 2)
-        self.link2 = BeverageCooler(10, 10, 10, 0)
-        self.link3 = KitchenFridge(15, 15, 15, 10)
+        self.link2 = BeverageCooler(10, 10, 9, 5)
+        self.link3 = KitchenFridge(15, 15, 15, 15)
 
     def standardChain(self):
         self.link1.set_successor(self.link2)

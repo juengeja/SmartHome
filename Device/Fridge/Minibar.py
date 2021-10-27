@@ -44,7 +44,8 @@ class Minibar(FridgeHandler):
             else:
                 self._successor.request_available_item(item, amount)
         if item == "cola":
-            if amount < self._colaCount:
+            if amount <= self._colaCount:
                 print(str(self._colaCount) + " cola bottles are available in: " + fridge)
             else:
+                print(str(self._colaCount) + " cola bottles are available in: " + fridge)
                 self._successor.request_available_item(item, amount)

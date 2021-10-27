@@ -1,6 +1,6 @@
 import minibar as minibar
 
-from Device.DeviceDecorator.FridgeDecorator import AddItemsDecorator
+from Device.DeviceDecorator.FridgeDecorator import GetItemsDecorator, AddItemsDecorator
 from Device.DeviceDecorator.LightDecorator import CountdownDecorator, SoundDecorator
 from Device.Fridge.BeverageCooler import BeverageCooler
 from Device.Fridge.FridgeChain import FridgeChain
@@ -19,8 +19,8 @@ if __name__ == '__main__':
     # run_singleModernLightExample()
 
     fridgeChain = FridgeChain()
-    addItemsDecorator = AddItemsDecorator(fridgeChain.link1, fridgeChain)
-    addItemsDecorator.get_item("cola", 2)
+    getItemsDecorator = GetItemsDecorator(fridgeChain.link1, fridgeChain)
+    getItemsDecorator.get_item("cola", 3)
 
     addItemsDecorator = AddItemsDecorator(fridgeChain.link3, fridgeChain)
-    addItemsDecorator.add_item("water", 2)
+    addItemsDecorator.add_item("water", 3)

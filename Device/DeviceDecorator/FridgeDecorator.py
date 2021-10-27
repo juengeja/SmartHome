@@ -34,6 +34,11 @@ class AddItemsDecorator(FridgeDecorator):
         print("recommended storage: ")
         self.fridgeHandler.request_add_item(item, amount)
 
+
+class GetItemsDecorator(FridgeDecorator):
+    def set_successor(successor):
+        pass
+
     def get_item(self, item, amount):
         self.fridgeChain.standardChain()
         self.fridgeHandler.request_available_item(item, amount)
