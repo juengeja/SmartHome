@@ -1,4 +1,4 @@
-import minibar as minibar
+#import minibar as minibar
 
 from Device.DeviceDecorator.FridgeDecorator import GetItemsDecorator, AddItemsDecorator
 from Device.DeviceDecorator.LightDecorator import CountdownDecorator, SoundDecorator

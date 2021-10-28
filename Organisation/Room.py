@@ -4,3 +4,6 @@ class Room:
         self.id = id
         self.name = name
         self.house = house
+
+    def setname(self, name):
+        self.name = name
